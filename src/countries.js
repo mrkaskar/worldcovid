@@ -546,3 +546,4 @@ const marks = countries.map((e, i) => {
   };
 });
 export default marks;
+// module.exports = { marks };

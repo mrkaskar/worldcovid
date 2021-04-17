@@ -9,9 +9,11 @@ import { useToasts } from "react-toast-notifications";
 import Search from "./components/Search";
 import Panel from "./components/Panel";
 import { fetchData } from "./functions/fetchData";
+import Spinner from "./components/Spinner";
 
-function getLocation(onSelect, addToast, geolocation) {
+function getLocation(onSelect, addToast, geolocation, setLoadLocation) {
   if (geolocation.current) {
+    setLoadLocation(false);
     onSelect(geolocation.current);
     return;
   }
@@ -38,6 +40,7 @@ function getLocation(onSelect, addToast, geolocation) {
               autoDismiss: true,
             });
             // alert(country);
+            setLoadLocation(false);
           });
       },
       (error) => {
@@ -45,6 +48,7 @@ function getLocation(onSelect, addToast, geolocation) {
           appearance: "error",
           autoDismiss: true,
         });
+        setLoadLocation(false);
       }
     );
   } else {
@@ -65,6 +69,7 @@ function App() {
   const geolocation = useRef(null);
   let [selectedCountry, setSelectedCountry] = useState(null);
   const [inputvalue, setInputValue] = useState("");
+  const [loadLocation, setLoadLocation] = useState(false);
 
   useEffect(() => {
     setOver(event);
@@ -126,6 +131,7 @@ function App() {
             setInputValue={setInputValue}
             countries={countries}
           />
+          {loadLocation && <Spinner />}
           {over && (
             <div
               id="over"
@@ -144,7 +150,10 @@ function App() {
           )}
           <Location
             id="location"
-            onClick={() => getLocation(onSelect, addToast, geolocation)}
+            onClick={() => {
+              setLoadLocation(true);
+              getLocation(onSelect, addToast, geolocation, setLoadLocation);
+            }}
           />
           <Panel
             selectedCountry={selectedCountry}
