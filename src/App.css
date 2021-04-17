@@ -35,6 +35,7 @@
 #title{
   display: flex;
   justify-content: center;
+  margin-top: 3px;
 }
 #titleflag{
   width: 50px;
@@ -42,7 +43,7 @@
   margin-top: 3px;
 }
 #continent{
-  margin-top: 0px;
+  margin-top: 8px;
   margin-bottom: 40px;
 }
 #ctitle{
@@ -132,9 +133,12 @@ background-color: rgba(0, 0, 0, 0.87);
 #close{
  position: absolute;
  right: 10px;
+ top: 6px;
  font-weight: bold;
  font-size: 1.5rem;
  pointer-events: fill;
+ color: rgba(255, 255, 255, 0.781);
+
 }
 #close:hover{
   cursor: pointer;
