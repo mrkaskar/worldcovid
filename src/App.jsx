@@ -144,7 +144,6 @@ function App() {
             >
               <img alt="flag" src={over.marker.flag} id="overimg" />
               <span>{over.marker.city}</span>
-              <br />
               <span id="newover">+{over.marker.newCase}</span>
             </div>
           )}
@@ -155,6 +154,7 @@ function App() {
               getLocation(onSelect, addToast, geolocation, setLoadLocation);
             }}
           />
+          <span id="developer">Developed By Kyaw Zin Thant</span>
           <Panel
             selectedCountry={selectedCountry}
             setSelectedCountry={setSelectedCountry}

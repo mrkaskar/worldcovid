@@ -88,12 +88,26 @@ background-color: rgba(0, 0, 0, 0.87);
  padding: 5px;
  color:white;
  pointer-events: none;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
 }
 #overimg{
   width: 50px;
 }
-#newover{color: rgb(241, 210, 33);}
-
+#newover{
+  color: rgb(241, 210, 33);
+  margin-top: 3px;
+}
+#developer{
+  color: white;
+  position: absolute;
+  bottom: 5px;
+  width: 220px;
+  left: 50%;
+  margin-left: -110px;
+}
 #statics{
  width: 500px;
  height: 600px;
