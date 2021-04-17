@@ -21,7 +21,7 @@ export default function Panel({
           </span>
           <div id="title">
             {selectedCountry.city !== "World Wide" && (
-              <img alt="flag" src={selectedCountry.flag} />
+              <img id="titleflag" alt="flag" src={selectedCountry.flag} />
             )}
             <h3 id="ctitle">{selectedCountry.city.toUpperCase()}</h3>
           </div>
