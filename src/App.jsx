@@ -3,11 +3,7 @@ import { Fragment, useCallback, useEffect, useRef, useState } from "react";
 import Globe from "./components/Globe";
 import markers from "./countryinfo";
 import { getData, getWorld } from "./service";
-import { between, format } from "./utils";
 import Location from "./svgs/location";
-
-import { matchSorter } from "match-sorter";
-import CountUp from "react-countup";
 import Loader from "./components/Loader";
 import { useToasts } from "react-toast-notifications";
 import Search from "./components/Search";
@@ -64,7 +60,7 @@ function App() {
   const [focus, setFoucs] = useState(null);
   const [over, setOver] = useState(null);
   const overDiv = useRef(null);
-  const [status, setStatus] = useState("Fetching data...");
+  const [status] = useState("Fetching data...");
   const { addToast } = useToasts();
   const geolocation = useRef(null);
   let [selectedCountry, setSelectedCountry] = useState(null);

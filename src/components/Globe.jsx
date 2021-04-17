@@ -58,7 +58,7 @@ function Globe({
           markerTooltipRenderer: (marker) => ``,
           markerRadiusScaleRange: [0.01, 0.05],
           markerRenderer: (marker) => {
-            const { color, id, value } = marker;
+            const { color, value } = marker;
             const scaledSize = value;
             const geometry = new SphereGeometry(scaledSize, 10, 10);
             const material = new MeshBasicMaterial({
