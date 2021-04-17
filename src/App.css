@@ -131,14 +131,15 @@ background-color: rgba(0, 0, 0, 0.87);
   cursor: pointer;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 550px) {
   /* For mobile phones: */
   #statics{
-    width: 350px;
-    left: 0px;
-    height: 450px;
+    width: 95%;
+    left: 50%;
+    height: 500px;
     margin-top: -10px;
- border: 0.5px solid rgba(0, 0, 0, 0.219);
+    border: 0.5px solid rgba(0, 0, 0, 0.219);
+    margin-left: -50%;
   }
   .panel{
     font-size: 1.3em;
@@ -157,7 +158,8 @@ background-color: rgba(0, 0, 0, 0.87);
     margin-left: -15px;
    }
    #last{
-     margin-top: -10px;
+     margin-top: -20px;
+    text-align: left; 
    }
 }
  #loader{

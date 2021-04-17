@@ -80,11 +80,12 @@ export default function Panel({
           </div>
           <div>
             <br />
-            <h5 id="last">Last Updated</h5>
-            {format(new Date(selectedCountry.time))}
-            <br />
-            <br />
-            {/\((.*)\)/.exec(new Date().toString())[1]}
+            <div id="last">
+              <h5>Last Updated</h5>
+              {format(new Date(selectedCountry.time))}
+              <br />
+              {/\((.*)\)/.exec(new Date().toString())[1]}
+            </div>
           </div>
         </div>
       )}

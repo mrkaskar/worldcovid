@@ -30,7 +30,7 @@ function Globe({
   useEffect(() => {
     setTimeout(() => {
       setShow(true);
-    }, 1000);
+    }, 3000);
   }, []);
   return (
     <>
