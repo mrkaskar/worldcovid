@@ -25,7 +25,7 @@ export default function Panel({
             )}
             <h3 id="ctitle">{selectedCountry.city.toUpperCase()}</h3>
           </div>
-          <h4>{selectedCountry.continent}</h4>
+          <h3 id="continent">{selectedCountry.continent}</h3>
           <div className="panel" id="total">
             <label>Total</label>
             <span>

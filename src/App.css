@@ -41,6 +41,10 @@
   height: 50px;
   margin-top: 3px;
 }
+#continent{
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
 #ctitle{
   margin-left: 8px;
 }
