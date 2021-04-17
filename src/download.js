@@ -24,6 +24,6 @@ codes.forEach((e) => {
   //   }
   // );
   console.log(`
-  <link rel="prefetch" href="/flags/${e}.png"> 
+    <img alt="flag" src="/flags/${e}.png"/>
   `);
 });
