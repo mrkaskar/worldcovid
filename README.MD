@@ -1,4 +1,12 @@
 # World Covid 3D Globe
+
+## Tech Stack
+> React JS
+
+> Three JS
+
+> Third Party API
+
 ### Features 
 1. Covid statistics for countries
 2. 3D Globe
