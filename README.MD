@@ -1,4 +1,5 @@
 # World Covid 3D Globe
+This project can be found at worldcovid.vercel.app
 
 ## Tech Stack
 > React JS
